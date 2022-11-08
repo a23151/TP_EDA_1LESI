@@ -1,0 +1,16 @@
+﻿  FuncoesEscalonamento.c
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesEscalonamento.c(21,30): warning C4028: formal parameter 1 different from declaration
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesEscalonamento.c(53,6): warning C4101: 'maq': unreferenced local variable
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesEscalonamento.c(127,27): warning C4028: formal parameter 1 different from declaration
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesEscalonamento.c(208,14): warning C4098: 'exportarPlanoCsv': 'void' function returning a value
+  Funcoes1.c
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\Funcoes1.c(266,30): warning C4047: '==': 'char [5]' differs in levels of indirection from 'int'
+  FuncoesJob.c
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesJob.c(70,52): warning C4047: 'function': 'int' differs in levels of indirection from 'char [5]'
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesJob.c(70,45): warning C4024: 'existeMaquina': different types for formal and actual parameter 2
+  main.c
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\main.c(19,19): warning C4133: 'function': incompatible types - from 'Planeamento [9][20]' to 'Celula (*)[20]'
+  Generating Code...
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\FuncoesJob.c(158): warning C4715: 'existeJob': not all control paths return a value
+C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\TP_EDA\Funcoes1.c(117): warning C4715: 'removerOperacao': not all control paths return a value
+  TP_EDA.vcxproj -> C:\Users\ASUS\Desktop\IPCA\1 ano\2_Semestre\TP_EDA_a23151\TP_EDA\x64\Debug\TP_EDA.exe

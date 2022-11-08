@@ -1,0 +1,79 @@
+\hypertarget{dados_funcoes_8h_source}{}\doxysection{dados\+Funcoes.\+h}
+\label{dados_funcoes_8h_source}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosFuncoes.h@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosFuncoes.h}}
+\mbox{\hyperlink{dados_funcoes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifndef DADOS}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}stdio.h"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}string.h"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}stdlib.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}stdbool.h"{}}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define N 5}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_job}{Job}} \{}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_job_af6b1912e80d0bc78e9f6ae6e44da0835}{codigoJob}};}
+\DoxyCodeLine{26     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{struct_job_a11f56a788366fa5148bb82ef05fd40e9}{listaOperacoes}};}
+\DoxyCodeLine{27     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{struct_job_af6bfacf9567d8daca9c9f15bdfc3364b}{left}};}
+\DoxyCodeLine{28     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{struct_job_a2fe155d501d6d50c8ff7c4ee8e557cfd}{right}};}
+\DoxyCodeLine{29 \} \mbox{\hyperlink{dados_funcoes_8h_a7f678ed7503a7b4211821d14323751d8}{Job}};}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_operacao}{Operacao}} \{}
+\DoxyCodeLine{36     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_operacao_a4c96a6f2ce0f1066e69fa13fa13d60d8}{codigo}};}
+\DoxyCodeLine{37     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_maquina}{Maquina}}* \mbox{\hyperlink{struct_operacao_ab02740cf1ea96c708246205b4c88b22c}{listaMaquinas}};}
+\DoxyCodeLine{38     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{struct_operacao_a844c9f3fd38441044df0e501b4fb741a}{next}};}
+\DoxyCodeLine{39 \} \mbox{\hyperlink{dados_funcoes_8h_abe9e0e280b37dffadb9164c18310462d}{Operacao}};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_maquina}{Maquina}} \{}
+\DoxyCodeLine{46     \textcolor{keywordtype}{char} \textcolor{keywordtype}{id}[\mbox{\hyperlink{dados_funcoes_8h_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{47     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_maquina_a38becf9f2d50c8fc63b0c87dfc83aef4}{tempo}};}
+\DoxyCodeLine{48     \textcolor{keyword}{struct }\mbox{\hyperlink{struct_maquina}{Maquina}}* \mbox{\hyperlink{struct_maquina_a8cbfb5dd871556837128a586e83992a9}{next}};}
+\DoxyCodeLine{49 \} \mbox{\hyperlink{dados_funcoes_8h_a9cf752acb85e5524c5da46e853b7e9cd}{Maquina}};}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_job_info_file}{JobInfoFile}} \{}
+\DoxyCodeLine{56     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_job_info_file_ae71c63a3adb2aea21d2a28c661128f59}{codigoJob}};}
+\DoxyCodeLine{57     \mbox{\hyperlink{struct_operacao}{Operacao}} \mbox{\hyperlink{struct_job_info_file_ad624995e5cad0500b94aac8c00718193}{operacaoFile}};}
+\DoxyCodeLine{58     \mbox{\hyperlink{struct_maquina}{Maquina}} \mbox{\hyperlink{struct_job_info_file_a70a33298b4ac1fda75b3d216c66c7e8b}{maquinaFile}};}
+\DoxyCodeLine{59 \} \mbox{\hyperlink{dados_funcoes_8h_a2a91c25ecbbcd6a585427f522f720b3e}{JobInfoFile}};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 }
+\DoxyCodeLine{67 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_ab9ba14cc389362149b95d66710ae5c42}{iniciarArvore}}();}
+\DoxyCodeLine{68 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_a328acb65fa0fde842fa02cb59166a3a4}{lerFicheiroTexto}}();}
+\DoxyCodeLine{69 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_a8adcd85f14f617f80de2d7937e988e36}{criarNodoJob}}(\textcolor{keywordtype}{int} codigoJob);}
+\DoxyCodeLine{70 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_a77c4751d7c4e50a15726a4b2b6ba5e95}{inserirNodoJobArvore}}(\mbox{\hyperlink{struct_job}{Job}}* root, \mbox{\hyperlink{struct_job}{Job}}* novoJob);}
+\DoxyCodeLine{71 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_ad493dd91da5efaad6e26b82c150c286b}{existeJob}}(\mbox{\hyperlink{struct_job}{Job}}* root, \textcolor{keywordtype}{int} codigoJob);}
+\DoxyCodeLine{72 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_afb8b50963560e6ced87d79096934149b}{removerJob}}(\mbox{\hyperlink{struct_job}{Job}}* root, \textcolor{keywordtype}{int} codigoJob);}
+\DoxyCodeLine{73 \mbox{\hyperlink{struct_job}{Job}}* \mbox{\hyperlink{dados_funcoes_8h_a4522ec43d2b7727cfe0293512118a1f7}{procurarMin}}(\mbox{\hyperlink{struct_job}{Job}}* root);}
+\DoxyCodeLine{74 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_a2493960272317f90938f8412675c8945}{mostrarArvore}}(\mbox{\hyperlink{struct_job}{Job}}* root);}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_a620ccaa3f89d804a6943dabbd870489b}{guardarArvore}}(\mbox{\hyperlink{struct_job}{Job}}* root, FILE* fp);}
+\DoxyCodeLine{77 \textcolor{keywordtype}{bool} \mbox{\hyperlink{dados_funcoes_8h_ae65b4c7abac458933bac7c5c235c7069}{guardarArvoreFicheiro}}(\mbox{\hyperlink{struct_job}{Job}}* root, \textcolor{keywordtype}{char}* fileName);}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_a21af0c2684881bad0053b1e754b31217}{criarOperacao}}(\textcolor{keywordtype}{int} codigo);}
+\DoxyCodeLine{81 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_a45824fd31380c6a9ef005bfd694dcec9}{inserirOperacao}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h, \mbox{\hyperlink{struct_operacao}{Operacao}}* nova);}
+\DoxyCodeLine{82 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_a7dc1e497d2445c70833ae769e04d3410}{removerListaOperacoes}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{83 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_a11ddc4312f9718d8906bd69fd3f8602c}{removerOperacao}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h, \textcolor{keywordtype}{int} codigo);}
+\DoxyCodeLine{84 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_ac6ac465d4e188d2de2ef829fa7b2e33c}{existeOperacaoPtr}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h, \textcolor{keywordtype}{int} codigo);}
+\DoxyCodeLine{85 \textcolor{keywordtype}{bool} \mbox{\hyperlink{dados_funcoes_8h_af4e513d49b2c501cab7d2023bd48eab8}{existeOperacao}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h, \textcolor{keywordtype}{int} codigo);}
+\DoxyCodeLine{86 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_a09dd3fcc3653dc68f9309592b3dd5661}{mostrarListaOperacao}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{87 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_ade361b76a2e147aabb2aaa6699b4f3ba}{mostrarListaOperacaoeMaquinas}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{90 \mbox{\hyperlink{struct_operacao}{Operacao}}* \mbox{\hyperlink{dados_funcoes_8h_a1a371564d41ad66262da3e6428ba0ca0}{inserirMaquinaOperacao}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h, \textcolor{keywordtype}{int} codOper, \mbox{\hyperlink{struct_maquina}{Maquina}}* m);}
+\DoxyCodeLine{91 \mbox{\hyperlink{struct_maquina}{Maquina}}* \mbox{\hyperlink{dados_funcoes_8h_a9fea241861f32506b1bf11e2e463c6a8}{criarMaquina}}(\textcolor{keywordtype}{char}* \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} tempo);}
+\DoxyCodeLine{92 \mbox{\hyperlink{struct_maquina}{Maquina}}* \mbox{\hyperlink{dados_funcoes_8h_acbfdc525540a7d198b40a8a7e56f918b}{inserirMaquina}}(\mbox{\hyperlink{struct_maquina}{Maquina}}* h, \mbox{\hyperlink{struct_maquina}{Maquina}}* nova);}
+\DoxyCodeLine{93 \mbox{\hyperlink{struct_maquina}{Maquina}}* \mbox{\hyperlink{dados_funcoes_8h_a302ed79907c6630dbb4f519d76209677}{removerListaMaquinas}}(\mbox{\hyperlink{struct_maquina}{Maquina}}* h);}
+\DoxyCodeLine{94 \textcolor{keywordtype}{bool} \mbox{\hyperlink{dados_funcoes_8h_a369e9abdbf58360ce7a9aeff3fdd4170}{existeMaquina}}(\mbox{\hyperlink{struct_maquina}{Maquina}}* h, \textcolor{keywordtype}{int} idMaquina);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_af313634e5ee2dc599baaf7cdf001f327}{tempoMinimo}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{97 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_a34ea44a55dbc3fe88cbd4ff20ab9db91}{tempoMaximo}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{98 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_funcoes_8h_a6d3b802c4582812668250fd3ecb9c980}{tempoMedio}}(\mbox{\hyperlink{struct_operacao}{Operacao}}* h);}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define DADOS}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

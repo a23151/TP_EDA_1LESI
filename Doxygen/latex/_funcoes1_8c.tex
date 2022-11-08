@@ -1,0 +1,359 @@
+\hypertarget{_funcoes1_8c}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+IPCA/1 ano/2\+\_\+\+Semestre/\+TP\+\_\+\+EDA\+\_\+a23151/\+TP\+\_\+\+EDA/\+TP\+\_\+\+EDA/\+Funcoes1.c File Reference}
+\label{_funcoes1_8c}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/Funcoes1.c@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/Funcoes1.c}}
+
+
+Funções desenvolvidas para a fase 1 do projeto, para gestão de operações e máquinas de um job.  
+
+
+{\ttfamily \#include \char`\"{}dados\+Funcoes.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a21af0c2684881bad0053b1e754b31217}{criar\+Operacao}} (int codigo)
+\begin{DoxyCompactList}\small\item\em Cria uma operação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a45824fd31380c6a9ef005bfd694dcec9}{inserir\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Insere operações no final da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes1_8c_a09dd3fcc3653dc68f9309592b3dd5661}{mostrar\+Lista\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Mostra a lista de operações. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a7dc1e497d2445c70833ae769e04d3410}{remover\+Lista\+Operacoes}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Remove lista de operações. Remove primeiro as listas de máquinas associadas às operações. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a11ddc4312f9718d8906bd69fd3f8602c}{remover\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Elimina uma operação da lista através do seu código. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_funcoes1_8c_af4e513d49b2c501cab7d2023bd48eab8}{existe\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Verifica se a operação já existe na lista de operações. Compara o código das operações. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_ac6ac465d4e188d2de2ef829fa7b2e33c}{existe\+Operacao\+Ptr}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Verifica se a operação já existe na lista de operações. Compara o código das operações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes1_8c_ade361b76a2e147aabb2aaa6699b4f3ba}{mostrar\+Lista\+Operacaoe\+Maquinas}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Mostra as maquinas que podem realizar cada operação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a9fea241861f32506b1bf11e2e463c6a8}{criar\+Maquina}} (char $\ast$id, int tempo)
+\begin{DoxyCompactList}\small\item\em Cria máquinas com a estrutura de \mbox{\hyperlink{struct_maquina}{Maquina}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_acbfdc525540a7d198b40a8a7e56f918b}{inserir\+Maquina}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h, \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Inserir máquinas numa lista de máquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a46bcbf1016aa534c12b42a545776264f}{inserir\+Maquina\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int cod\+Oper, \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$maq)
+\begin{DoxyCompactList}\small\item\em Inserir máquinas na lista de operações. Procura o código da operação e insere a máquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{_funcoes1_8c_a302ed79907c6630dbb4f519d76209677}{remover\+Lista\+Maquinas}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Remove lista de máquinas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_funcoes1_8c_a369e9abdbf58360ce7a9aeff3fdd4170}{existe\+Maquina}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h, int id\+Maquina)
+\begin{DoxyCompactList}\small\item\em Verifica se uma máquina existe na lista de máquinas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes1_8c_af313634e5ee2dc599baaf7cdf001f327}{tempo\+Minimo}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo mínimo necessário para completar o job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes1_8c_a34ea44a55dbc3fe88cbd4ff20ab9db91}{tempo\+Maximo}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo máximo necessário para completar o job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes1_8c_a6d3b802c4582812668250fd3ecb9c980}{tempo\+Medio}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo médio para completar o job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funções desenvolvidas para a fase 1 do projeto, para gestão de operações e máquinas de um job. 
+
+Funcoes desenvolvidas para gestao de jobs. Os jobs estão organizados numa estrutura de ABP.
+
+Funcoes desenvolvidas para uma proposta de escalonamento.
+
+\begin{DoxyAuthor}{Author}
+Adriana Gomes @email \href{mailto:a23151@alunos.ipca.pt}{\texttt{ a23151@alunos.\+ipca.\+pt}} ~\newline
+ 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Abril de 2022
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+Adriana Gomes @email \href{mailto:a23151@alunos.ipca.pt}{\texttt{ a23151@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Maio de 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_funcoes1_8c_a9fea241861f32506b1bf11e2e463c6a8}\label{_funcoes1_8c_a9fea241861f32506b1bf11e2e463c6a8}} 
+\index{Funcoes1.c@{Funcoes1.c}!criarMaquina@{criarMaquina}}
+\index{criarMaquina@{criarMaquina}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{criarMaquina()}{criarMaquina()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ criar\+Maquina (\begin{DoxyParamCaption}\item[{char $\ast$}]{id,  }\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+
+
+Cria máquinas com a estrutura de \mbox{\hyperlink{struct_maquina}{Maquina}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ Código identificador da máquina \\
+\hline
+{\em tempo} & -\/ Tempo que a máquina demora para realizar a operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nova máquina 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a21af0c2684881bad0053b1e754b31217}\label{_funcoes1_8c_a21af0c2684881bad0053b1e754b31217}} 
+\index{Funcoes1.c@{Funcoes1.c}!criarOperacao@{criarOperacao}}
+\index{criarOperacao@{criarOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{criarOperacao()}{criarOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ criar\+Operacao (\begin{DoxyParamCaption}\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Cria uma operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Retorna a operação criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a369e9abdbf58360ce7a9aeff3fdd4170}\label{_funcoes1_8c_a369e9abdbf58360ce7a9aeff3fdd4170}} 
+\index{Funcoes1.c@{Funcoes1.c}!existeMaquina@{existeMaquina}}
+\index{existeMaquina@{existeMaquina}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{existeMaquina()}{existeMaquina()}}
+{\footnotesize\ttfamily bool existe\+Maquina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h,  }\item[{int}]{id\+Maquina }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma máquina existe na lista de máquinas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de máquinas \\
+\hline
+{\em id\+Maquina} & -\/ ID da máquina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ False se a máquina não existir; True se a máquina já existir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_af4e513d49b2c501cab7d2023bd48eab8}\label{_funcoes1_8c_af4e513d49b2c501cab7d2023bd48eab8}} 
+\index{Funcoes1.c@{Funcoes1.c}!existeOperacao@{existeOperacao}}
+\index{existeOperacao@{existeOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{existeOperacao()}{existeOperacao()}}
+{\footnotesize\ttfamily bool existe\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Verifica se a operação já existe na lista de operações. Compara o código das operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ True se a operação existir; False se não existe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_ac6ac465d4e188d2de2ef829fa7b2e33c}\label{_funcoes1_8c_ac6ac465d4e188d2de2ef829fa7b2e33c}} 
+\index{Funcoes1.c@{Funcoes1.c}!existeOperacaoPtr@{existeOperacaoPtr}}
+\index{existeOperacaoPtr@{existeOperacaoPtr}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{existeOperacaoPtr()}{existeOperacaoPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ existe\+Operacao\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Verifica se a operação já existe na lista de operações. Compara o código das operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve NULL se não existir; Retorna um apontador para a operação se existir. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_acbfdc525540a7d198b40a8a7e56f918b}\label{_funcoes1_8c_acbfdc525540a7d198b40a8a7e56f918b}} 
+\index{Funcoes1.c@{Funcoes1.c}!inserirMaquina@{inserirMaquina}}
+\index{inserirMaquina@{inserirMaquina}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{inserirMaquina()}{inserirMaquina()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ inserir\+Maquina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Inserir máquinas numa lista de máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de máquinas \\
+\hline
+{\em nova} & -\/ Máquina a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de máquinas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a46bcbf1016aa534c12b42a545776264f}\label{_funcoes1_8c_a46bcbf1016aa534c12b42a545776264f}} 
+\index{Funcoes1.c@{Funcoes1.c}!inserirMaquinaOperacao@{inserirMaquinaOperacao}}
+\index{inserirMaquinaOperacao@{inserirMaquinaOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{inserirMaquinaOperacao()}{inserirMaquinaOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ inserir\+Maquina\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{cod\+Oper,  }\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{maq }\end{DoxyParamCaption})}
+
+
+
+Inserir máquinas na lista de operações. Procura o código da operação e insere a máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em cod\+Oper} & -\/ Código da operação \\
+\hline
+{\em m} & -\/ Máquina a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de operações 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a45824fd31380c6a9ef005bfd694dcec9}\label{_funcoes1_8c_a45824fd31380c6a9ef005bfd694dcec9}} 
+\index{Funcoes1.c@{Funcoes1.c}!inserirOperacao@{inserirOperacao}}
+\index{inserirOperacao@{inserirOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{inserirOperacao()}{inserirOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ inserir\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Insere operações no final da lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+{\em nova} & -\/ Nova operação a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve início da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a09dd3fcc3653dc68f9309592b3dd5661}\label{_funcoes1_8c_a09dd3fcc3653dc68f9309592b3dd5661}} 
+\index{Funcoes1.c@{Funcoes1.c}!mostrarListaOperacao@{mostrarListaOperacao}}
+\index{mostrarListaOperacao@{mostrarListaOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{mostrarListaOperacao()}{mostrarListaOperacao()}}
+{\footnotesize\ttfamily void mostrar\+Lista\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Mostra a lista de operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes1_8c_ade361b76a2e147aabb2aaa6699b4f3ba}\label{_funcoes1_8c_ade361b76a2e147aabb2aaa6699b4f3ba}} 
+\index{Funcoes1.c@{Funcoes1.c}!mostrarListaOperacaoeMaquinas@{mostrarListaOperacaoeMaquinas}}
+\index{mostrarListaOperacaoeMaquinas@{mostrarListaOperacaoeMaquinas}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{mostrarListaOperacaoeMaquinas()}{mostrarListaOperacaoeMaquinas()}}
+{\footnotesize\ttfamily void mostrar\+Lista\+Operacaoe\+Maquinas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Mostra as maquinas que podem realizar cada operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes1_8c_a302ed79907c6630dbb4f519d76209677}\label{_funcoes1_8c_a302ed79907c6630dbb4f519d76209677}} 
+\index{Funcoes1.c@{Funcoes1.c}!removerListaMaquinas@{removerListaMaquinas}}
+\index{removerListaMaquinas@{removerListaMaquinas}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{removerListaMaquinas()}{removerListaMaquinas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ remover\+Lista\+Maquinas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Remove lista de máquinas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de máquinas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a7dc1e497d2445c70833ae769e04d3410}\label{_funcoes1_8c_a7dc1e497d2445c70833ae769e04d3410}} 
+\index{Funcoes1.c@{Funcoes1.c}!removerListaOperacoes@{removerListaOperacoes}}
+\index{removerListaOperacoes@{removerListaOperacoes}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{removerListaOperacoes()}{removerListaOperacoes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ remover\+Lista\+Operacoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Remove lista de operações. Remove primeiro as listas de máquinas associadas às operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve início da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a11ddc4312f9718d8906bd69fd3f8602c}\label{_funcoes1_8c_a11ddc4312f9718d8906bd69fd3f8602c}} 
+\index{Funcoes1.c@{Funcoes1.c}!removerOperacao@{removerOperacao}}
+\index{removerOperacao@{removerOperacao}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{removerOperacao()}{removerOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ remover\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Elimina uma operação da lista através do seu código. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de operações (início) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes1_8c_a34ea44a55dbc3fe88cbd4ff20ab9db91}\label{_funcoes1_8c_a34ea44a55dbc3fe88cbd4ff20ab9db91}} 
+\index{Funcoes1.c@{Funcoes1.c}!tempoMaximo@{tempoMaximo}}
+\index{tempoMaximo@{tempoMaximo}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{tempoMaximo()}{tempoMaximo()}}
+{\footnotesize\ttfamily void tempo\+Maximo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo máximo necessário para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes1_8c_a6d3b802c4582812668250fd3ecb9c980}\label{_funcoes1_8c_a6d3b802c4582812668250fd3ecb9c980}} 
+\index{Funcoes1.c@{Funcoes1.c}!tempoMedio@{tempoMedio}}
+\index{tempoMedio@{tempoMedio}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{tempoMedio()}{tempoMedio()}}
+{\footnotesize\ttfamily void tempo\+Medio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo médio para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes1_8c_af313634e5ee2dc599baaf7cdf001f327}\label{_funcoes1_8c_af313634e5ee2dc599baaf7cdf001f327}} 
+\index{Funcoes1.c@{Funcoes1.c}!tempoMinimo@{tempoMinimo}}
+\index{tempoMinimo@{tempoMinimo}!Funcoes1.c@{Funcoes1.c}}
+\doxysubsubsection{\texorpdfstring{tempoMinimo()}{tempoMinimo()}}
+{\footnotesize\ttfamily void tempo\+Minimo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo mínimo necessário para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}

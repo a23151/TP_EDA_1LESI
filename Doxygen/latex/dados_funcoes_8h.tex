@@ -1,0 +1,618 @@
+\hypertarget{dados_funcoes_8h}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+IPCA/1 ano/2\+\_\+\+Semestre/\+TP\+\_\+\+EDA\+\_\+a23151/\+TP\+\_\+\+EDA/\+TP\+\_\+\+EDA/dados\+Funcoes.h File Reference}
+\label{dados_funcoes_8h}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosFuncoes.h@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosFuncoes.h}}
+
+
+Estruturas e assinatura das Fun��es desenvolvidas para gest�o de m�quinas, opera��es e jobs.  
+
+
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}string.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_job}{Job}}
+\begin{DoxyCompactList}\small\item\em Informa��o de um \mbox{\hyperlink{struct_job}{Job}} (C�digo do job, apontador para lista de opera��es e apontadores para arvore de jobs) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_operacao}{Operacao}}
+\begin{DoxyCompactList}\small\item\em Informa��o de uma opera��o (C�digo, apontadores para lista de m�quina e para a pr�xima opera��o) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_maquina}{Maquina}}
+\begin{DoxyCompactList}\small\item\em Informa��o de uma m�quina (ID, tempo, apontador para a pr�xima m�quina) \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_job_info_file}{Job\+Info\+File}}
+\begin{DoxyCompactList}\small\item\em Informa��o de um \mbox{\hyperlink{struct_job}{Job}} para armazenar num ficheiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dados_funcoes_8h_a0240ac851181b84ac374872dc5434ee4}{N}}~5
+\item 
+\#define \mbox{\hyperlink{dados_funcoes_8h_afa99d9567f3e9b82f1c75fa41754fa3c}{DADOS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_job}{Job}} \mbox{\hyperlink{dados_funcoes_8h_a7f678ed7503a7b4211821d14323751d8}{Job}}
+\item 
+typedef struct \mbox{\hyperlink{struct_operacao}{Operacao}} \mbox{\hyperlink{dados_funcoes_8h_abe9e0e280b37dffadb9164c18310462d}{Operacao}}
+\item 
+typedef struct \mbox{\hyperlink{struct_maquina}{Maquina}} \mbox{\hyperlink{dados_funcoes_8h_a9cf752acb85e5524c5da46e853b7e9cd}{Maquina}}
+\item 
+typedef struct \mbox{\hyperlink{struct_job_info_file}{Job\+Info\+File}} \mbox{\hyperlink{dados_funcoes_8h_a2a91c25ecbbcd6a585427f522f720b3e}{Job\+Info\+File}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_ab9ba14cc389362149b95d66710ae5c42}{iniciar\+Arvore}} ()
+\begin{DoxyCompactList}\small\item\em Inicia a arvore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a328acb65fa0fde842fa02cb59166a3a4}{ler\+Ficheiro\+Texto}} ()
+\begin{DoxyCompactList}\small\item\em Ler ficheiro de texto e construir a arvore, com os operacoes e as maquinas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a8adcd85f14f617f80de2d7937e988e36}{criar\+Nodo\+Job}} (int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Cria novo \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a77c4751d7c4e50a15726a4b2b6ba5e95}{inserir\+Nodo\+Job\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, \mbox{\hyperlink{struct_job}{Job}} $\ast$novo\+Job)
+\begin{DoxyCompactList}\small\item\em Constrói (insere nodos) a árvore binária. Se o código do novo \mbox{\hyperlink{struct_job}{Job}} é maior do que a raiz, insere do lado direito, se for menor é inserido do lado esquerdo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_ad493dd91da5efaad6e26b82c150c286b}{existe\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe na árvore. Compara os códigos dos Jobs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_afb8b50963560e6ced87d79096934149b}{remover\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Remove um \mbox{\hyperlink{struct_job}{Job}} da árvore. Percorre a árvore e se o nodo tiver um \char`\"{}filho\char`\"{}, será guardada numa váriavel temporária e depois inserida na árvore. Caso o nodo tenha dois \char`\"{}filhos\char`\"{}, é substituido pelo nodo mais à esquerda (menor) do seu nodo direito. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a4522ec43d2b7727cfe0293512118a1f7}{procurar\+Min}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Procura o mínimo do lado direito da árvore. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_a2493960272317f90938f8412675c8945}{mostrar\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Mostra o código dos Jobs (nodos) da árvore in-\/order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_a620ccaa3f89d804a6943dabbd870489b}{guardar\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Guarda toda a informação da árvore (jobs, operações e máquinas). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{dados_funcoes_8h_ae65b4c7abac458933bac7c5c235c7069}{guardar\+Arvore\+Ficheiro}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Guarda toda a informação da árvore (jobs, operações e máquinas) num ficheiro. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a21af0c2684881bad0053b1e754b31217}{criar\+Operacao}} (int codigo)
+\begin{DoxyCompactList}\small\item\em Cria uma operação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a45824fd31380c6a9ef005bfd694dcec9}{inserir\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Insere operações no final da lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a7dc1e497d2445c70833ae769e04d3410}{remover\+Lista\+Operacoes}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Remove lista de operações. Remove primeiro as listas de máquinas associadas às operações. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a11ddc4312f9718d8906bd69fd3f8602c}{remover\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Elimina uma operação da lista através do seu código. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_ac6ac465d4e188d2de2ef829fa7b2e33c}{existe\+Operacao\+Ptr}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Verifica se a operação já existe na lista de operações. Compara o código das operações. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{dados_funcoes_8h_af4e513d49b2c501cab7d2023bd48eab8}{existe\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int codigo)
+\begin{DoxyCompactList}\small\item\em Verifica se a operação já existe na lista de operações. Compara o código das operações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_a09dd3fcc3653dc68f9309592b3dd5661}{mostrar\+Lista\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Mostra a lista de operações. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_ade361b76a2e147aabb2aaa6699b4f3ba}{mostrar\+Lista\+Operacaoe\+Maquinas}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Mostra as maquinas que podem realizar cada operação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a1a371564d41ad66262da3e6428ba0ca0}{inserir\+Maquina\+Operacao}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h, int cod\+Oper, \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Inserir máquinas na lista de operações. Procura o código da operação e insere a máquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a9fea241861f32506b1bf11e2e463c6a8}{criar\+Maquina}} (char $\ast$id, int tempo)
+\begin{DoxyCompactList}\small\item\em Cria máquinas com a estrutura de \mbox{\hyperlink{struct_maquina}{Maquina}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_acbfdc525540a7d198b40a8a7e56f918b}{inserir\+Maquina}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h, \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Inserir máquinas numa lista de máquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ \mbox{\hyperlink{dados_funcoes_8h_a302ed79907c6630dbb4f519d76209677}{remover\+Lista\+Maquinas}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Remove lista de máquinas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{dados_funcoes_8h_a369e9abdbf58360ce7a9aeff3fdd4170}{existe\+Maquina}} (\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$h, int id\+Maquina)
+\begin{DoxyCompactList}\small\item\em Verifica se uma máquina existe na lista de máquinas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_af313634e5ee2dc599baaf7cdf001f327}{tempo\+Minimo}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo mínimo necessário para completar o job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_a34ea44a55dbc3fe88cbd4ff20ab9db91}{tempo\+Maximo}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo máximo necessário para completar o job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{dados_funcoes_8h_a6d3b802c4582812668250fd3ecb9c980}{tempo\+Medio}} (\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinação do tempo médio para completar o job. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estruturas e assinatura das Fun��es desenvolvidas para gest�o de m�quinas, opera��es e jobs. 
+
+\begin{DoxyAuthor}{Author}
+Adriana Gomes @email \href{mailto:a23151@alunos.ipca.pt}{\texttt{ a23151@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Abril de 2022 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dados_funcoes_8h_afa99d9567f3e9b82f1c75fa41754fa3c}\label{dados_funcoes_8h_afa99d9567f3e9b82f1c75fa41754fa3c}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!DADOS@{DADOS}}
+\index{DADOS@{DADOS}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{DADOS}{DADOS}}
+{\footnotesize\ttfamily \#define DADOS}
+
+\mbox{\Hypertarget{dados_funcoes_8h_a0240ac851181b84ac374872dc5434ee4}\label{dados_funcoes_8h_a0240ac851181b84ac374872dc5434ee4}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!N@{N}}
+\index{N@{N}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily \#define N~5}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{dados_funcoes_8h_a7f678ed7503a7b4211821d14323751d8}\label{dados_funcoes_8h_a7f678ed7503a7b4211821d14323751d8}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!Job@{Job}}
+\index{Job@{Job}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{Job}{Job}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_job}{Job}} \mbox{\hyperlink{struct_job}{Job}}}
+
+\mbox{\Hypertarget{dados_funcoes_8h_a2a91c25ecbbcd6a585427f522f720b3e}\label{dados_funcoes_8h_a2a91c25ecbbcd6a585427f522f720b3e}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!JobInfoFile@{JobInfoFile}}
+\index{JobInfoFile@{JobInfoFile}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{JobInfoFile}{JobInfoFile}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_job_info_file}{Job\+Info\+File}} \mbox{\hyperlink{struct_job_info_file}{Job\+Info\+File}}}
+
+\mbox{\Hypertarget{dados_funcoes_8h_a9cf752acb85e5524c5da46e853b7e9cd}\label{dados_funcoes_8h_a9cf752acb85e5524c5da46e853b7e9cd}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!Maquina@{Maquina}}
+\index{Maquina@{Maquina}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{Maquina}{Maquina}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_maquina}{Maquina}} \mbox{\hyperlink{struct_maquina}{Maquina}}}
+
+\mbox{\Hypertarget{dados_funcoes_8h_abe9e0e280b37dffadb9164c18310462d}\label{dados_funcoes_8h_abe9e0e280b37dffadb9164c18310462d}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!Operacao@{Operacao}}
+\index{Operacao@{Operacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{Operacao}{Operacao}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_operacao}{Operacao}} \mbox{\hyperlink{struct_operacao}{Operacao}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dados_funcoes_8h_a9fea241861f32506b1bf11e2e463c6a8}\label{dados_funcoes_8h_a9fea241861f32506b1bf11e2e463c6a8}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!criarMaquina@{criarMaquina}}
+\index{criarMaquina@{criarMaquina}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{criarMaquina()}{criarMaquina()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ criar\+Maquina (\begin{DoxyParamCaption}\item[{char $\ast$}]{id,  }\item[{int}]{tempo }\end{DoxyParamCaption})}
+
+
+
+Cria máquinas com a estrutura de \mbox{\hyperlink{struct_maquina}{Maquina}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & -\/ Código identificador da máquina \\
+\hline
+{\em tempo} & -\/ Tempo que a máquina demora para realizar a operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Nova máquina 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a8adcd85f14f617f80de2d7937e988e36}\label{dados_funcoes_8h_a8adcd85f14f617f80de2d7937e988e36}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!criarNodoJob@{criarNodoJob}}
+\index{criarNodoJob@{criarNodoJob}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{criarNodoJob()}{criarNodoJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ criar\+Nodo\+Job (\begin{DoxyParamCaption}\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Cria novo \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Job} & -\/ Código no novo \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ novo \mbox{\hyperlink{struct_job}{Job}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a21af0c2684881bad0053b1e754b31217}\label{dados_funcoes_8h_a21af0c2684881bad0053b1e754b31217}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!criarOperacao@{criarOperacao}}
+\index{criarOperacao@{criarOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{criarOperacao()}{criarOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ criar\+Operacao (\begin{DoxyParamCaption}\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Cria uma operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Retorna a operação criada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_ad493dd91da5efaad6e26b82c150c286b}\label{dados_funcoes_8h_ad493dd91da5efaad6e26b82c150c286b}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!existeJob@{existeJob}}
+\index{existeJob@{existeJob}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{existeJob()}{existeJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ existe\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe na árvore. Compara os códigos dos Jobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em codigo\+Job} & -\/ Código do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve a árvore caso o \mbox{\hyperlink{struct_job}{Job}} exista ou NULL se não existir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a369e9abdbf58360ce7a9aeff3fdd4170}\label{dados_funcoes_8h_a369e9abdbf58360ce7a9aeff3fdd4170}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!existeMaquina@{existeMaquina}}
+\index{existeMaquina@{existeMaquina}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{existeMaquina()}{existeMaquina()}}
+{\footnotesize\ttfamily bool existe\+Maquina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h,  }\item[{int}]{id\+Maquina }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma máquina existe na lista de máquinas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de máquinas \\
+\hline
+{\em id\+Maquina} & -\/ ID da máquina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ False se a máquina não existir; True se a máquina já existir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_af4e513d49b2c501cab7d2023bd48eab8}\label{dados_funcoes_8h_af4e513d49b2c501cab7d2023bd48eab8}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!existeOperacao@{existeOperacao}}
+\index{existeOperacao@{existeOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{existeOperacao()}{existeOperacao()}}
+{\footnotesize\ttfamily bool existe\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Verifica se a operação já existe na lista de operações. Compara o código das operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ True se a operação existir; False se não existe 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_ac6ac465d4e188d2de2ef829fa7b2e33c}\label{dados_funcoes_8h_ac6ac465d4e188d2de2ef829fa7b2e33c}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!existeOperacaoPtr@{existeOperacaoPtr}}
+\index{existeOperacaoPtr@{existeOperacaoPtr}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{existeOperacaoPtr()}{existeOperacaoPtr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ existe\+Operacao\+Ptr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Verifica se a operação já existe na lista de operações. Compara o código das operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve NULL se não existir; Retorna um apontador para a operação se existir. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a620ccaa3f89d804a6943dabbd870489b}\label{dados_funcoes_8h_a620ccaa3f89d804a6943dabbd870489b}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!guardarArvore@{guardarArvore}}
+\index{guardarArvore@{guardarArvore}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{guardarArvore()}{guardarArvore()}}
+{\footnotesize\ttfamily void guardar\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Guarda toda a informação da árvore (jobs, operações e máquinas). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em fp} & -\/ Apontador para o ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_ae65b4c7abac458933bac7c5c235c7069}\label{dados_funcoes_8h_ae65b4c7abac458933bac7c5c235c7069}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!guardarArvoreFicheiro@{guardarArvoreFicheiro}}
+\index{guardarArvoreFicheiro@{guardarArvoreFicheiro}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{guardarArvoreFicheiro()}{guardarArvoreFicheiro()}}
+{\footnotesize\ttfamily bool guardar\+Arvore\+Ficheiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Guarda toda a informação da árvore (jobs, operações e máquinas) num ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em file\+Name} & -\/ Nome do ficheiro onde vai ser guardada a informação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ True se abrir, guardar e fechar o ficheiro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_ab9ba14cc389362149b95d66710ae5c42}\label{dados_funcoes_8h_ab9ba14cc389362149b95d66710ae5c42}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!iniciarArvore@{iniciarArvore}}
+\index{iniciarArvore@{iniciarArvore}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{iniciarArvore()}{iniciarArvore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ iniciar\+Arvore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia a arvore. 
+
+Assinaturas das fun��es desenvolvidas
+
+\begin{DoxyReturn}{Returns}
+-\/ NULL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_acbfdc525540a7d198b40a8a7e56f918b}\label{dados_funcoes_8h_acbfdc525540a7d198b40a8a7e56f918b}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!inserirMaquina@{inserirMaquina}}
+\index{inserirMaquina@{inserirMaquina}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{inserirMaquina()}{inserirMaquina()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ inserir\+Maquina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Inserir máquinas numa lista de máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de máquinas \\
+\hline
+{\em nova} & -\/ Máquina a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de máquinas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a1a371564d41ad66262da3e6428ba0ca0}\label{dados_funcoes_8h_a1a371564d41ad66262da3e6428ba0ca0}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!inserirMaquinaOperacao@{inserirMaquinaOperacao}}
+\index{inserirMaquinaOperacao@{inserirMaquinaOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{inserirMaquinaOperacao()}{inserirMaquinaOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ inserir\+Maquina\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{cod\+Oper,  }\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{maq }\end{DoxyParamCaption})}
+
+
+
+Inserir máquinas na lista de operações. Procura o código da operação e insere a máquina. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em cod\+Oper} & -\/ Código da operação \\
+\hline
+{\em m} & -\/ Máquina a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de operações 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a77c4751d7c4e50a15726a4b2b6ba5e95}\label{dados_funcoes_8h_a77c4751d7c4e50a15726a4b2b6ba5e95}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!inserirNodoJobArvore@{inserirNodoJobArvore}}
+\index{inserirNodoJobArvore@{inserirNodoJobArvore}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{inserirNodoJobArvore()}{inserirNodoJobArvore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ inserir\+Nodo\+Job\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{novo\+Job }\end{DoxyParamCaption})}
+
+
+
+Constrói (insere nodos) a árvore binária. Se o código do novo \mbox{\hyperlink{struct_job}{Job}} é maior do que a raiz, insere do lado direito, se for menor é inserido do lado esquerdo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore (início) \\
+\hline
+{\em novo\+Job} & -\/ \mbox{\hyperlink{struct_job}{Job}} a ser inserido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Apontador para a raiz da árvore 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a45824fd31380c6a9ef005bfd694dcec9}\label{dados_funcoes_8h_a45824fd31380c6a9ef005bfd694dcec9}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!inserirOperacao@{inserirOperacao}}
+\index{inserirOperacao@{inserirOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{inserirOperacao()}{inserirOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ inserir\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Insere operações no final da lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+{\em nova} & -\/ Nova operação a inserir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve início da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a328acb65fa0fde842fa02cb59166a3a4}\label{dados_funcoes_8h_a328acb65fa0fde842fa02cb59166a3a4}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!lerFicheiroTexto@{lerFicheiroTexto}}
+\index{lerFicheiroTexto@{lerFicheiroTexto}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{lerFicheiroTexto()}{lerFicheiroTexto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ ler\+Ficheiro\+Texto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ler ficheiro de texto e construir a arvore, com os operacoes e as maquinas. 
+
+\begin{DoxyReturn}{Returns}
+-\/ Árvore de Jobs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a2493960272317f90938f8412675c8945}\label{dados_funcoes_8h_a2493960272317f90938f8412675c8945}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!mostrarArvore@{mostrarArvore}}
+\index{mostrarArvore@{mostrarArvore}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{mostrarArvore()}{mostrarArvore()}}
+{\footnotesize\ttfamily void mostrar\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Mostra o código dos Jobs (nodos) da árvore in-\/order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_a09dd3fcc3653dc68f9309592b3dd5661}\label{dados_funcoes_8h_a09dd3fcc3653dc68f9309592b3dd5661}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!mostrarListaOperacao@{mostrarListaOperacao}}
+\index{mostrarListaOperacao@{mostrarListaOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{mostrarListaOperacao()}{mostrarListaOperacao()}}
+{\footnotesize\ttfamily void mostrar\+Lista\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Mostra a lista de operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_ade361b76a2e147aabb2aaa6699b4f3ba}\label{dados_funcoes_8h_ade361b76a2e147aabb2aaa6699b4f3ba}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!mostrarListaOperacaoeMaquinas@{mostrarListaOperacaoeMaquinas}}
+\index{mostrarListaOperacaoeMaquinas@{mostrarListaOperacaoeMaquinas}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{mostrarListaOperacaoeMaquinas()}{mostrarListaOperacaoeMaquinas()}}
+{\footnotesize\ttfamily void mostrar\+Lista\+Operacaoe\+Maquinas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Mostra as maquinas que podem realizar cada operação. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_a4522ec43d2b7727cfe0293512118a1f7}\label{dados_funcoes_8h_a4522ec43d2b7727cfe0293512118a1f7}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!procurarMin@{procurarMin}}
+\index{procurarMin@{procurarMin}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{procurarMin()}{procurarMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ procurar\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Procura o mínimo do lado direito da árvore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raíz da árvore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Apontador para o nodo com o mínimo valor da árvore binária 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_afb8b50963560e6ced87d79096934149b}\label{dados_funcoes_8h_afb8b50963560e6ced87d79096934149b}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!removerJob@{removerJob}}
+\index{removerJob@{removerJob}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{removerJob()}{removerJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ remover\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Remove um \mbox{\hyperlink{struct_job}{Job}} da árvore. Percorre a árvore e se o nodo tiver um \char`\"{}filho\char`\"{}, será guardada numa váriavel temporária e depois inserida na árvore. Caso o nodo tenha dois \char`\"{}filhos\char`\"{}, é substituido pelo nodo mais à esquerda (menor) do seu nodo direito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raíz da árvore \\
+\hline
+{\em codigo\+Job} & -\/ Código do \mbox{\hyperlink{struct_job}{Job}} a ser removido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Árvore binária de Jobs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a302ed79907c6630dbb4f519d76209677}\label{dados_funcoes_8h_a302ed79907c6630dbb4f519d76209677}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!removerListaMaquinas@{removerListaMaquinas}}
+\index{removerListaMaquinas@{removerListaMaquinas}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{removerListaMaquinas()}{removerListaMaquinas()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$ remover\+Lista\+Maquinas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_maquina}{Maquina}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Remove lista de máquinas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de máquinas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a7dc1e497d2445c70833ae769e04d3410}\label{dados_funcoes_8h_a7dc1e497d2445c70833ae769e04d3410}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!removerListaOperacoes@{removerListaOperacoes}}
+\index{removerListaOperacoes@{removerListaOperacoes}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{removerListaOperacoes()}{removerListaOperacoes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ remover\+Lista\+Operacoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Remove lista de operações. Remove primeiro as listas de máquinas associadas às operações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve início da lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a11ddc4312f9718d8906bd69fd3f8602c}\label{dados_funcoes_8h_a11ddc4312f9718d8906bd69fd3f8602c}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!removerOperacao@{removerOperacao}}
+\index{removerOperacao@{removerOperacao}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{removerOperacao()}{removerOperacao()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$ remover\+Operacao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h,  }\item[{int}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Elimina uma operação da lista através do seu código. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Início da lista de operações \\
+\hline
+{\em codigo} & -\/ Código da operação a eliminar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Lista de operações (início) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{dados_funcoes_8h_a34ea44a55dbc3fe88cbd4ff20ab9db91}\label{dados_funcoes_8h_a34ea44a55dbc3fe88cbd4ff20ab9db91}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!tempoMaximo@{tempoMaximo}}
+\index{tempoMaximo@{tempoMaximo}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{tempoMaximo()}{tempoMaximo()}}
+{\footnotesize\ttfamily void tempo\+Maximo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo máximo necessário para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_a6d3b802c4582812668250fd3ecb9c980}\label{dados_funcoes_8h_a6d3b802c4582812668250fd3ecb9c980}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!tempoMedio@{tempoMedio}}
+\index{tempoMedio@{tempoMedio}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{tempoMedio()}{tempoMedio()}}
+{\footnotesize\ttfamily void tempo\+Medio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo médio para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{dados_funcoes_8h_af313634e5ee2dc599baaf7cdf001f327}\label{dados_funcoes_8h_af313634e5ee2dc599baaf7cdf001f327}} 
+\index{dadosFuncoes.h@{dadosFuncoes.h}!tempoMinimo@{tempoMinimo}}
+\index{tempoMinimo@{tempoMinimo}!dadosFuncoes.h@{dadosFuncoes.h}}
+\doxysubsubsection{\texorpdfstring{tempoMinimo()}{tempoMinimo()}}
+{\footnotesize\ttfamily void tempo\+Minimo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_operacao}{Operacao}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinação do tempo mínimo necessário para completar o job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ Apontador para início da lista de operações \\
+\hline
+\end{DoxyParams}

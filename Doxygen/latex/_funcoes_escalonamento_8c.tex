@@ -1,0 +1,130 @@
+\hypertarget{_funcoes_escalonamento_8c}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+IPCA/1 ano/2\+\_\+\+Semestre/\+TP\+\_\+\+EDA\+\_\+a23151/\+TP\+\_\+\+EDA/\+TP\+\_\+\+EDA/\+Funcoes\+Escalonamento.c File Reference}
+\label{_funcoes_escalonamento_8c}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/FuncoesEscalonamento.c@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/FuncoesEscalonamento.c}}
+{\ttfamily \#include \char`\"{}dados\+Funcoes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}dados\+Escalonamento.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_aa3be6eeb8ebca3ca622253bbf8f6cba6}{inicia\+Plano}} (\mbox{\hyperlink{struct_planeamento}{Planeamento}} plano\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{dados_escalonamento_8h_a0acb682b8260ab1c60b918599864e2e5}{T}}\mbox{]})
+\begin{DoxyCompactList}\small\item\em Inicializar o array bidimensional. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_a3fe6b0c7d53b0f08c8a1d61bd182aca6}{iniciar\+Array\+Auxiliar}} (\mbox{\hyperlink{struct_celula}{Celula}} auxiliar\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Inicializar o array auxiliar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_a99393303f2660b52d9674257c93d557e}{preencher\+Celula}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Para cada nodo da árvore preenche a estrutura \mbox{\hyperlink{struct_celula}{Celula}} (aux\+Cel). Esta informação é colocada um array auxiliar através da função preenche\+Array\+Auxiliar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_a9a58949118ce7b7fbb06247ff3b5b953}{preenche\+Array\+Auxiliar}} (\mbox{\hyperlink{struct_celula}{Celula}} auxiliar\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{struct_celula}{Celula}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Preencher array auxiliar param auxiliar array param nova \mbox{\hyperlink{struct_celula}{Celula}} com informação da máquina mais rápida de cada operação do job. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_a4648bef5fe1ad78729b0361c94aa368d}{preencher\+Array\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Função que permite preencher a célula com a informação da máquina mais rápida para uma determinada operação de um job. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_funcoes_escalonamento_8c_ad3da61ddb85cadb9d60b0aaa830a4dbd}{devolve\+Maquina}} (\mbox{\hyperlink{struct_celula}{Celula}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Função que associa o ID da máquina a um valor inteiro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_escalonamento_8c_a599e5b08e1f0b590008f7fc76df8edfc}{ocupaplano}} (\mbox{\hyperlink{struct_planeamento}{Planeamento}} plano\mbox{[}$\,$\mbox{]}\mbox{[}\mbox{\hyperlink{dados_escalonamento_8h_a0acb682b8260ab1c60b918599864e2e5}{T}}\mbox{]}, \mbox{\hyperlink{struct_celula}{Celula}} $\ast$nova)
+\begin{DoxyCompactList}\small\item\em Preenche o plano. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_ad3da61ddb85cadb9d60b0aaa830a4dbd}\label{_funcoes_escalonamento_8c_ad3da61ddb85cadb9d60b0aaa830a4dbd}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!devolveMaquina@{devolveMaquina}}
+\index{devolveMaquina@{devolveMaquina}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{devolveMaquina()}{devolveMaquina()}}
+{\footnotesize\ttfamily int devolve\+Maquina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_celula}{Celula}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Função que associa o ID da máquina a um valor inteiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nova} & Célula com novos dados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ID da máquina 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_aa3be6eeb8ebca3ca622253bbf8f6cba6}\label{_funcoes_escalonamento_8c_aa3be6eeb8ebca3ca622253bbf8f6cba6}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!iniciaPlano@{iniciaPlano}}
+\index{iniciaPlano@{iniciaPlano}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{iniciaPlano()}{iniciaPlano()}}
+{\footnotesize\ttfamily void inicia\+Plano (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_planeamento}{Planeamento}}}]{plano\mbox{[}$\,$\mbox{]}\mbox{[}\+T\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Inicializar o array bidimensional. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plano} & -\/ array bidimensional com maquinas (linhas) e unidades de tempo (colunas) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_a3fe6b0c7d53b0f08c8a1d61bd182aca6}\label{_funcoes_escalonamento_8c_a3fe6b0c7d53b0f08c8a1d61bd182aca6}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!iniciarArrayAuxiliar@{iniciarArrayAuxiliar}}
+\index{iniciarArrayAuxiliar@{iniciarArrayAuxiliar}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{iniciarArrayAuxiliar()}{iniciarArrayAuxiliar()}}
+{\footnotesize\ttfamily void iniciar\+Array\+Auxiliar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_celula}{Celula}}}]{auxiliar\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Inicializar o array auxiliar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plano} & Array que armazena a informação de todas as operações de cada job \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_a599e5b08e1f0b590008f7fc76df8edfc}\label{_funcoes_escalonamento_8c_a599e5b08e1f0b590008f7fc76df8edfc}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!ocupaplano@{ocupaplano}}
+\index{ocupaplano@{ocupaplano}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{ocupaplano()}{ocupaplano()}}
+{\footnotesize\ttfamily void ocupaplano (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_planeamento}{Planeamento}}}]{plano\mbox{[}$\,$\mbox{]}\mbox{[}\+T\mbox{]},  }\item[{\mbox{\hyperlink{struct_celula}{Celula}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Preenche o plano. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em plano} & Array bidimensional para representar o escalonamento \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_a9a58949118ce7b7fbb06247ff3b5b953}\label{_funcoes_escalonamento_8c_a9a58949118ce7b7fbb06247ff3b5b953}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!preencheArrayAuxiliar@{preencheArrayAuxiliar}}
+\index{preencheArrayAuxiliar@{preencheArrayAuxiliar}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{preencheArrayAuxiliar()}{preencheArrayAuxiliar()}}
+{\footnotesize\ttfamily void preenche\+Array\+Auxiliar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_celula}{Celula}}}]{auxiliar\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{struct_celula}{Celula}} $\ast$}]{nova }\end{DoxyParamCaption})}
+
+
+
+Preencher array auxiliar param auxiliar array param nova \mbox{\hyperlink{struct_celula}{Celula}} com informação da máquina mais rápida de cada operação do job. 
+
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_a4648bef5fe1ad78729b0361c94aa368d}\label{_funcoes_escalonamento_8c_a4648bef5fe1ad78729b0361c94aa368d}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!preencherArrayArvore@{preencherArrayArvore}}
+\index{preencherArrayArvore@{preencherArrayArvore}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{preencherArrayArvore()}{preencherArrayArvore()}}
+{\footnotesize\ttfamily void preencher\+Array\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Função que permite preencher a célula com a informação da máquina mais rápida para uma determinada operação de um job. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Árvore de jobs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Célula preenchida 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_escalonamento_8c_a99393303f2660b52d9674257c93d557e}\label{_funcoes_escalonamento_8c_a99393303f2660b52d9674257c93d557e}} 
+\index{FuncoesEscalonamento.c@{FuncoesEscalonamento.c}!preencherCelula@{preencherCelula}}
+\index{preencherCelula@{preencherCelula}!FuncoesEscalonamento.c@{FuncoesEscalonamento.c}}
+\doxysubsubsection{\texorpdfstring{preencherCelula()}{preencherCelula()}}
+{\footnotesize\ttfamily void preencher\+Celula (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Para cada nodo da árvore preenche a estrutura \mbox{\hyperlink{struct_celula}{Celula}} (aux\+Cel). Esta informação é colocada um array auxiliar através da função preenche\+Array\+Auxiliar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & \\
+\hline
+\end{DoxyParams}

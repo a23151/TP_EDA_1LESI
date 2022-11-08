@@ -1,0 +1,36 @@
+\hypertarget{dados_escalonamento_8h_source}{}\doxysection{dados\+Escalonamento.\+h}
+\label{dados_escalonamento_8h_source}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosEscalonamento.h@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/dadosEscalonamento.h}}
+\mbox{\hyperlink{dados_escalonamento_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{dados_funcoes_8h}{dadosFuncoes.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define M 8}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#define T 100}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#define valorIni -\/1}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{21 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_celula}{Celula}} \{}
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_celula_a88422a784696aded711347be1be86123}{codigoJob}};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_celula_aea6410d2608eb5f04fa4cb72aa8f4890}{codigoOper}};}
+\DoxyCodeLine{24     \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_celula_a2c7b9318088de09b8b9d3d2036c4e0c4}{idMaq}} [\mbox{\hyperlink{dados_funcoes_8h_a0240ac851181b84ac374872dc5434ee4}{N}}];}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_celula_ac5b0fb031abc9c6c92a05dced142c97a}{tempo}};}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_celula_a14a742013674d67df68058aeb103f491}{tempoFinal}};}
+\DoxyCodeLine{27 \} \mbox{\hyperlink{dados_escalonamento_8h_a75d68084b7d7b8955a9679a9799a951b}{Celula}};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_planeamento}{Planeamento}} \{}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_planeamento_a718719d57b64d312bacd71c85706ba36}{codigoJob}};}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_planeamento_a2b105313c62c10e6f98808b98bfdb74a}{codigoOper}};}
+\DoxyCodeLine{33 \} \mbox{\hyperlink{dados_escalonamento_8h_aa752b99b07acc67bcc728d439f2d3f7a}{Planeamento}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_ab9a9bb27f3b231be205cda99042ed46c}{iniciaPlano}}(\mbox{\hyperlink{struct_celula}{Celula}} plano[][\mbox{\hyperlink{dados_escalonamento_8h_a0acb682b8260ab1c60b918599864e2e5}{T}}], \textcolor{keywordtype}{int} valor);}
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_a3fe6b0c7d53b0f08c8a1d61bd182aca6}{iniciarArrayAuxiliar}}(\mbox{\hyperlink{struct_celula}{Celula}} auxiliar[]);}
+\DoxyCodeLine{42 \textcolor{keywordtype}{int} \mbox{\hyperlink{dados_escalonamento_8h_ad3da61ddb85cadb9d60b0aaa830a4dbd}{devolveMaquina}}(\mbox{\hyperlink{struct_celula}{Celula}}* nova);}
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_a99393303f2660b52d9674257c93d557e}{preencherCelula}}(\mbox{\hyperlink{struct_job}{Job}}* root);}
+\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_a4648bef5fe1ad78729b0361c94aa368d}{preencherArrayArvore}}(\mbox{\hyperlink{struct_job}{Job}}* root);}
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_a9a58949118ce7b7fbb06247ff3b5b953}{preencheArrayAuxiliar}}(\mbox{\hyperlink{struct_celula}{Celula}} auxiliar[], \mbox{\hyperlink{struct_celula}{Celula}}* nova);}
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{dados_escalonamento_8h_a599e5b08e1f0b590008f7fc76df8edfc}{ocupaplano}}(\mbox{\hyperlink{struct_planeamento}{Planeamento}} plano[][\mbox{\hyperlink{dados_escalonamento_8h_a0acb682b8260ab1c60b918599864e2e5}{T}}], \mbox{\hyperlink{struct_celula}{Celula}}* nova);}
+\DoxyCodeLine{47 }
+
+\end{DoxyCode}

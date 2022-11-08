@@ -1,0 +1,203 @@
+\hypertarget{_funcoes_job_8c}{}\doxysection{C\+:/\+Users/\+ASUS/\+Desktop/\+IPCA/1 ano/2\+\_\+\+Semestre/\+TP\+\_\+\+EDA\+\_\+a23151/\+TP\+\_\+\+EDA/\+TP\+\_\+\+EDA/\+Funcoes\+Job.c File Reference}
+\label{_funcoes_job_8c}\index{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/FuncoesJob.c@{C:/Users/ASUS/Desktop/IPCA/1 ano/2\_Semestre/TP\_EDA\_a23151/TP\_EDA/TP\_EDA/FuncoesJob.c}}
+{\ttfamily \#include \char`\"{}dados\+Funcoes.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_ab9ba14cc389362149b95d66710ae5c42}{iniciar\+Arvore}} ()
+\begin{DoxyCompactList}\small\item\em Inicia a arvore. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_a328acb65fa0fde842fa02cb59166a3a4}{ler\+Ficheiro\+Texto}} ()
+\begin{DoxyCompactList}\small\item\em Ler ficheiro de texto e construir a arvore, com os operacoes e as maquinas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_a8adcd85f14f617f80de2d7937e988e36}{criar\+Nodo\+Job}} (int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Cria novo \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_a77c4751d7c4e50a15726a4b2b6ba5e95}{inserir\+Nodo\+Job\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, \mbox{\hyperlink{struct_job}{Job}} $\ast$novo\+Job)
+\begin{DoxyCompactList}\small\item\em Constrói (insere nodos) a árvore binária. Se o código do novo \mbox{\hyperlink{struct_job}{Job}} é maior do que a raiz, insere do lado direito, se for menor é inserido do lado esquerdo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_job_8c_a2493960272317f90938f8412675c8945}{mostrar\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Mostra o código dos Jobs (nodos) da árvore in-\/order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_ad493dd91da5efaad6e26b82c150c286b}{existe\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe na árvore. Compara os códigos dos Jobs. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_afb8b50963560e6ced87d79096934149b}{remover\+Job}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, int codigo\+Job)
+\begin{DoxyCompactList}\small\item\em Remove um \mbox{\hyperlink{struct_job}{Job}} da árvore. Percorre a árvore e se o nodo tiver um \char`\"{}filho\char`\"{}, será guardada numa váriavel temporária e depois inserida na árvore. Caso o nodo tenha dois \char`\"{}filhos\char`\"{}, é substituido pelo nodo mais à esquerda (menor) do seu nodo direito. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{_funcoes_job_8c_a4522ec43d2b7727cfe0293512118a1f7}{procurar\+Min}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root)
+\begin{DoxyCompactList}\small\item\em Procura o mínimo do lado direito da árvore. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_funcoes_job_8c_a620ccaa3f89d804a6943dabbd870489b}{guardar\+Arvore}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, FILE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Guarda toda a informação da árvore (jobs, operações e máquinas). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_funcoes_job_8c_ae65b4c7abac458933bac7c5c235c7069}{guardar\+Arvore\+Ficheiro}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$root, char $\ast$file\+Name)
+\begin{DoxyCompactList}\small\item\em Guarda toda a informação da árvore (jobs, operações e máquinas) num ficheiro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_funcoes_job_8c_a8adcd85f14f617f80de2d7937e988e36}\label{_funcoes_job_8c_a8adcd85f14f617f80de2d7937e988e36}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!criarNodoJob@{criarNodoJob}}
+\index{criarNodoJob@{criarNodoJob}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{criarNodoJob()}{criarNodoJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ criar\+Nodo\+Job (\begin{DoxyParamCaption}\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Cria novo \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em codigo\+Job} & -\/ Código no novo \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ novo \mbox{\hyperlink{struct_job}{Job}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_ad493dd91da5efaad6e26b82c150c286b}\label{_funcoes_job_8c_ad493dd91da5efaad6e26b82c150c286b}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!existeJob@{existeJob}}
+\index{existeJob@{existeJob}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{existeJob()}{existeJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ existe\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe na árvore. Compara os códigos dos Jobs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em codigo\+Job} & -\/ Código do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Devolve a árvore caso o \mbox{\hyperlink{struct_job}{Job}} exista ou NULL se não existir 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_a620ccaa3f89d804a6943dabbd870489b}\label{_funcoes_job_8c_a620ccaa3f89d804a6943dabbd870489b}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!guardarArvore@{guardarArvore}}
+\index{guardarArvore@{guardarArvore}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{guardarArvore()}{guardarArvore()}}
+{\footnotesize\ttfamily void guardar\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{FILE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Guarda toda a informação da árvore (jobs, operações e máquinas). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em fp} & -\/ Apontador para o ficheiro \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes_job_8c_ae65b4c7abac458933bac7c5c235c7069}\label{_funcoes_job_8c_ae65b4c7abac458933bac7c5c235c7069}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!guardarArvoreFicheiro@{guardarArvoreFicheiro}}
+\index{guardarArvoreFicheiro@{guardarArvoreFicheiro}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{guardarArvoreFicheiro()}{guardarArvoreFicheiro()}}
+{\footnotesize\ttfamily bool guardar\+Arvore\+Ficheiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+Guarda toda a informação da árvore (jobs, operações e máquinas) num ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+{\em file\+Name} & -\/ Nome do ficheiro onde vai ser guardada a informação \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ True se abrir, guardar e fechar o ficheiro. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_ab9ba14cc389362149b95d66710ae5c42}\label{_funcoes_job_8c_ab9ba14cc389362149b95d66710ae5c42}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!iniciarArvore@{iniciarArvore}}
+\index{iniciarArvore@{iniciarArvore}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{iniciarArvore()}{iniciarArvore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ iniciar\+Arvore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia a arvore. 
+
+\begin{DoxyReturn}{Returns}
+-\/ NULL 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_a77c4751d7c4e50a15726a4b2b6ba5e95}\label{_funcoes_job_8c_a77c4751d7c4e50a15726a4b2b6ba5e95}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!inserirNodoJobArvore@{inserirNodoJobArvore}}
+\index{inserirNodoJobArvore@{inserirNodoJobArvore}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{inserirNodoJobArvore()}{inserirNodoJobArvore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ inserir\+Nodo\+Job\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{novo\+Job }\end{DoxyParamCaption})}
+
+
+
+Constrói (insere nodos) a árvore binária. Se o código do novo \mbox{\hyperlink{struct_job}{Job}} é maior do que a raiz, insere do lado direito, se for menor é inserido do lado esquerdo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore (início) \\
+\hline
+{\em novo\+Job} & -\/ \mbox{\hyperlink{struct_job}{Job}} a ser inserido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Apontador para a raiz da árvore 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_a328acb65fa0fde842fa02cb59166a3a4}\label{_funcoes_job_8c_a328acb65fa0fde842fa02cb59166a3a4}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!lerFicheiroTexto@{lerFicheiroTexto}}
+\index{lerFicheiroTexto@{lerFicheiroTexto}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{lerFicheiroTexto()}{lerFicheiroTexto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ ler\+Ficheiro\+Texto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Ler ficheiro de texto e construir a arvore, com os operacoes e as maquinas. 
+
+\begin{DoxyReturn}{Returns}
+-\/ Árvore de Jobs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_a2493960272317f90938f8412675c8945}\label{_funcoes_job_8c_a2493960272317f90938f8412675c8945}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!mostrarArvore@{mostrarArvore}}
+\index{mostrarArvore@{mostrarArvore}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{mostrarArvore()}{mostrarArvore()}}
+{\footnotesize\ttfamily void mostrar\+Arvore (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Mostra o código dos Jobs (nodos) da árvore in-\/order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raiz da árvore \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{_funcoes_job_8c_a4522ec43d2b7727cfe0293512118a1f7}\label{_funcoes_job_8c_a4522ec43d2b7727cfe0293512118a1f7}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!procurarMin@{procurarMin}}
+\index{procurarMin@{procurarMin}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{procurarMin()}{procurarMin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ procurar\+Min (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+
+
+Procura o mínimo do lado direito da árvore. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raíz da árvore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Apontador para o nodo com o mínimo valor da árvore binária 
+\end{DoxyReturn}
+\mbox{\Hypertarget{_funcoes_job_8c_afb8b50963560e6ced87d79096934149b}\label{_funcoes_job_8c_afb8b50963560e6ced87d79096934149b}} 
+\index{FuncoesJob.c@{FuncoesJob.c}!removerJob@{removerJob}}
+\index{removerJob@{removerJob}!FuncoesJob.c@{FuncoesJob.c}}
+\doxysubsubsection{\texorpdfstring{removerJob()}{removerJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}} $\ast$ remover\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{root,  }\item[{int}]{codigo\+Job }\end{DoxyParamCaption})}
+
+
+
+Remove um \mbox{\hyperlink{struct_job}{Job}} da árvore. Percorre a árvore e se o nodo tiver um \char`\"{}filho\char`\"{}, será guardada numa váriavel temporária e depois inserida na árvore. Caso o nodo tenha dois \char`\"{}filhos\char`\"{}, é substituido pelo nodo mais à esquerda (menor) do seu nodo direito. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & -\/ Raíz da árvore \\
+\hline
+{\em codigo\+Job} & -\/ Código do \mbox{\hyperlink{struct_job}{Job}} a ser removido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ Árvore binária de Jobs 
+\end{DoxyReturn}
